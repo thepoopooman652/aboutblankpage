@@ -78,3 +78,15 @@ function checkLogin() {
         );
     };
 };
+
+// Function to check that the page was accessed via the login portal
+function checkRedirectSource() {
+  // Get the referrer URL
+  const referrer = document.referrer;
+
+  // Check if the referrer is "thepoopooman652.github.io/index.html"
+  if (referrer !== "https://thepoopooman652.github.io/index.html") {
+    // If not redirected from the specified URL, redirect to the error page
+    window.location.href = "https://error-pages.aidanwatters.kesug.com/402.html";
+  };
+};
