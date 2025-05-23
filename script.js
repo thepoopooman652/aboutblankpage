@@ -83,6 +83,7 @@ function checkLogin() {
 function checkRedirectSource() {
   // Get the referrer URL
   const referrer = document.referrer;
+  console.log(referrer);  
 
   // Check if the referrer is "thepoopooman652.github.io/index.html"
   if (referrer !== "https://thepoopooman652.github.io/index.html") {
