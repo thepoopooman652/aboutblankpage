@@ -1,4 +1,4 @@
-// Script file for the login functionalitu
+// Script file for the login functionality
 
 // Function to get a hash for a string, passed into the function with the string varible
 function stringToHash(string) {
