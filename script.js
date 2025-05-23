@@ -27,15 +27,15 @@ function checkLogin() {
         localStorage.setItem('secureToken', getSecureToken());
         // Display a browser alert when the users input matches the correct login
         alert("Logged in, opening page...");
-        // Write the paper about the topic to the page
-        window.location.replace("home.html");
+        // Replace the page with the about blank portal
+        window.location.replace("https://thepoopooman652.github.io/aboutblankpage/home.html");
         // Log a message to console when the hash of the users input matches the hash of the correct login
         console.log(
             "Users input hash matches the hash of the correct login, opening page..."
         );
-    } else if (userInputHash == 1516585992) {
-        // Replace the current page with the new one
-        window.location.replace("home.html");
+    } else if (userInputHash == 1516585992) {       
+        // Replace the page with the about blank portal
+        window.location.replace("https://thepoopooman652.github.io/aboutblankpage/home.html");
         // Log a message to console when the hash of the users input matches the hash of the correct login
         console.log(
             "Users input hash matches the hash of the correct login, opening page..."
