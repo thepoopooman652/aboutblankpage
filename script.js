@@ -12,6 +12,25 @@ function stringToHash(string) {
     return hash;
 };
 
+// Function to get the time and return it, in order to secure the page containing the article itself
+function getSecureToken() {
+    var now = new Date();
+    var hours = String(now.getHours()).padStart(2, '0');
+    var minutes = String(now.getMinutes()).padStart(2, '0');
+    var seconds = String(now.getSeconds()).padStart(2, '0');
+    var time = `${hours}${minutes}`;
+    var exactTime = `${hours}:${minutes}:${seconds}`
+    var exactTimeMS = Date.now();
+    var date = getDate();
+    localStorage.setItem('lastTokenGenTime', `{
+        "date": "${date}",
+        "time": "${exactTime}",
+        "unixtimestamp": "${exactTimeMS}"
+        }`);
+    var secureToken = BigInt(time) ** BigInt(64);
+    return secureToken.toLocaleString('fullwide', { useGrouping: false });
+};
+
 // Function to check the hash of the users input against the hash for the correct login
 function checkLogin() {
     // Define the correct login and a varible to check what the users input is
