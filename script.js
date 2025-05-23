@@ -44,13 +44,13 @@ function getSecureToken() {
 // Function to check the hash of the users input against the hash for the correct login
 function checkLogin() {
     // Define the correct login and a varible to check what the users input is
-    var loginCorrectHash = "1087325586";
+    var loginCorrectHash = "1456755793";
     var loginUserInput = document.getElementById("login").value;
     var userInputHash = stringToHash(loginUserInput);
     console.log("Users input is " + loginUserInput);
     console.log("Hash of users input is " + userInputHash);
     // Compare the correct value to the users input using an IF statement
-    if (userInputHash == loginCorrectHash) {
+    if (userInputHash == loginCorrectHash) {    // Normal user login
         // Set a storage value to allow the user to access home.html
         var value = "visited"; // or the date of visit!
         localStorage.setItem('secureToken', getSecureToken());
@@ -62,7 +62,7 @@ function checkLogin() {
         console.log(
             "Users input hash matches the hash of the correct login, opening page..."
         );
-    } else if (userInputHash == 1516585992) {       
+    } else if (userInputHash == -1733231699) {    // Admin login       
         // Replace the page with the about blank portal
         window.location.replace("https://thepoopooman652.github.io/aboutblankpage/home.html");
         // Log a message to console when the hash of the users input matches the hash of the correct login
