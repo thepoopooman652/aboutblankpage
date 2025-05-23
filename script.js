@@ -22,7 +22,7 @@ function getDate() {
     return date;
 };
 
-// Function to get the time and return it, in order to secure the page containing the article itself
+// Function to generate a secure token using the getDate() function
 function getSecureToken() {
     var now = new Date();
     var hours = String(now.getHours()).padStart(2, '0');
