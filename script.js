@@ -1,4 +1,5 @@
 // Script file for the login functionality
+// PooMan Scripts (TM) (Pantent Pending (not really))
 
 // Function to get a hash for a string, passed into the function with the string varible
 function stringToHash(string) {
