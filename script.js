@@ -1,4 +1,4 @@
-// Script file for the login functionality
+// Script file for the login functionalitu
 
 // Function to get a hash for a string, passed into the function with the string varible
 function stringToHash(string) {
@@ -10,6 +10,16 @@ function stringToHash(string) {
         hash = hash & hash;
     };
     return hash;
+};
+
+// Function to get the current date in MM/DD/YY format
+function getDate() {
+    var now = new Date();
+    var month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+    var day = String(now.getDate()).padStart(2, '0');
+    var year = String(now.getFullYear()).slice(-2); // Get last two digits of year
+    var date = `${month}/${day}/${year}`
+    return date;
 };
 
 // Function to get the time and return it, in order to secure the page containing the article itself
