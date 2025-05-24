@@ -16,9 +16,9 @@ function stringToHash(string) {
 // Function to get the current date in MM/DD/YY format
 function getDate() {
     var now = new Date();
-    var month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+    var month = String(now.getMonth() + 1).padStart(2, '0');
     var day = String(now.getDate()).padStart(2, '0');
-    var year = String(now.getFullYear()).slice(-2); // Get last two digits of year
+    var year = String(now.getFullYear()).slice(-2);
     var date = `${month}/${day}/${year}`
     return date;
 };
