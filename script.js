@@ -75,7 +75,7 @@ function checkRedirectSource() {
     const referrer = document.referrer;
     console.log(referrer);
 
-    if (referrer !== "thepoopooman652.github.io/aboutblankpage/index.html") {
+    if (referrer !== "https://thepoopooman652.github.io/aboutblankpage/") {
         window.location.href = "http://error-pages.aidanwatters.kesug.com/403.html";
         console.error("I dont fucking know why, but shit didnt work man");
     };
