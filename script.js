@@ -44,36 +44,26 @@ function getSecureToken() {
 
 // Function to check the hash of the users input against the hash for the correct login
 function checkLogin() {
-    // Define the correct login and a varible to check what the users input is
     var loginCorrectHash = "1456755793";
     var loginUserInput = document.getElementById("login").value;
     var userInputHash = stringToHash(loginUserInput);
     console.log("Users input is " + loginUserInput);
     console.log("Hash of users input is " + userInputHash);
-    // Compare the correct value to the users input using an IF statement
-    if (userInputHash == loginCorrectHash) {    // Normal user login
-        // Set a storage value to allow the user to access home.html
-        var value = "visited"; // or the date of visit!
+    if (userInputHash == loginCorrectHash) { // Normal user login
         localStorage.setItem('secureToken', getSecureToken());
-        // Display a browser alert when the users input matches the correct login
         alert("Logged in, opening page...");
         // Replace the page with the about blank portal
         window.location.replace("https://thepoopooman652.github.io/aboutblankpage/home.html");
-        // Log a message to console when the hash of the users input matches the hash of the correct login
         console.log(
             "Users input hash matches the hash of the correct login, opening page..."
         );
-    } else if (userInputHash == -1733231699) {    // Admin login       
-        // Replace the page with the about blank portal
+    } else if (userInputHash == -1733231699) { // Admin login
         window.location.replace("https://thepoopooman652.github.io/aboutblankpage/home.html");
-        // Log a message to console when the hash of the users input matches the hash of the correct login
         console.log(
             "Users input hash matches the hash of the correct login, opening page..."
         );
     } else {
-        // Trigger a browser alert when the hash of the users input does not match the hash of the correct login
         alert("Incorrect login, try again.");
-        // Log a warning to the console when the hash of the users input does not match the hash of the correct login
         console.warn(
             "Hash of users input did not match the hash of the correct login"
         );
@@ -82,14 +72,11 @@ function checkLogin() {
 
 // Function to check that the page was accessed via the login portal
 function checkRedirectSource() {
-  // Get the referrer URL
-  const referrer = document.referrer;
-  console.log(referrer);  
+    const referrer = document.referrer;
+    console.log(referrer);
 
-  // Check if the referrer is "thepoopooman652.github.io/index.html"
-  if (referrer !== "https://thepoopooman652.github.io/aboutblankpage/index.html") {
-    // If not redirected from the specified URL, redirect to the error page
-    window.location.href = "http://error-pages.aidanwatters.kesug.com/403.html";
-    console.error("I dont fucking know why, but shit didnt work man");
-  };
+    if (referrer !== "https://thepoopooman652.github.io/aboutblankpage/index.html") {
+        window.location.href = "http://error-pages.aidanwatters.kesug.com/403.html";
+        console.error("I dont fucking know why, but shit didnt work man");
+    };
 };
