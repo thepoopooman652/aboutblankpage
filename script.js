@@ -10,6 +10,15 @@ textBox.addEventListener("keydown", function(event) {
         }
 });
 
+// Ass an event listener so that the user can hit enter in the textbox to open the page instead of hitting the button
+const urlTextBox = dovument.getElementById("urlBox");
+urlTextBox.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13 || event.code === "Enter") {
+            create();
+            event.preventDefault();
+        }
+});
+
 // Function to get a hash for a string, passed into the function with the string varible
 function stringToHash(string) {
     let hash = 0;
@@ -88,4 +97,19 @@ function checkRedirectSource() {
         window.location.href = "http://error-pages.aidanwatters.kesug.com/403.html";
         console.error("I dont fucking know why, but shit didnt work man");
     };
+};
+
+// Function to open the about:blank page with the chosen URL shown inside of the page
+function create() {
+            var url = document.getElementById('input').value;
+            var win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
 };
