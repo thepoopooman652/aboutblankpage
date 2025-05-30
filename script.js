@@ -1,6 +1,14 @@
 // Script file for the login functionality
 // PooMan Scripts (TM) (Pantent Pending (not really))
 
+// Add an event listener for the login textbox so that the enter key calls checkLogin();
+const textBox = document.getElementById("login");
+textBox.addEventListener("keypress", function(event) {
+    if (event.keyCode === 13 || event.key === "Enter") {
+            checkLogin();
+        }
+});
+
 // Function to get a hash for a string, passed into the function with the string varible
 function stringToHash(string) {
     let hash = 0;
