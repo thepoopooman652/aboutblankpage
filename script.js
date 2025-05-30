@@ -6,6 +6,7 @@ const textBox = document.getElementById("login");
 textBox.addEventListener("keypress", function(event) {
     if (event.keyCode === 13 || event.key === "Enter") {
             checkLogin();
+            event.preventDefault();
         }
 });
 
