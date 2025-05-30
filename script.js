@@ -3,8 +3,8 @@
 
 // Add an event listener for the login textbox so that the enter key calls checkLogin();
 const textBox = document.getElementById("login");
-textBox.addEventListener("keypress", function(event) {
-    if (event.keyCode === 13 || event.key === "Enter") {
+textBox.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13 || event.code === "Enter") {
             checkLogin();
             event.preventDefault();
         }
