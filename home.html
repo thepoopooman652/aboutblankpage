@@ -3,6 +3,46 @@
 
 <head>
     <title>about:blank</title>
+    <style>
+        body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.login-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#login {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 250px;
+}
+
+input[type="button"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="button"]:hover {
+  background-color: #0056b3;
+}
+    </style>
 </head>
 
 <body>
@@ -25,6 +65,11 @@
             win.document.body.appendChild(iframe);
         }
     </script>
+    <div class="login-container">
+        <input id="" placeholder="Please enter the URL" />
+        <br>
+        <input type="button" value="Open Page" onclick="create();" />
+    </div>
     <input type="text" placeholder="https://google.com" id='input' autofocus>
     <button onclick='create()'>Create!</button>
 </body>
