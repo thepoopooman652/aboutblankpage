@@ -100,7 +100,7 @@ function checkRedirectSource() {
 };
 
 // Function to open the about:blank page with the chosen URL shown inside of the page
-function create() {
+function create(url) {
             var url = document.getElementById('urlBox').value;
             var win = window.open();
             win.document.body.style.margin = '0';
