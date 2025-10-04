@@ -11,7 +11,7 @@ textBox.addEventListener("keydown", function(event) {
 });
 
 // Ass an event listener so that the user can hit enter in the textbox to open the page instead of hitting the button
-const urlTextBox = dovument.getElementById("urlBox");
+const urlTextBox = document.getElementById("urlBox");
 urlTextBox.addEventListener("keydown", function(event) {
     if (event.keyCode === 13 || event.code === "Enter") {
             create();
@@ -101,7 +101,7 @@ function checkRedirectSource() {
 
 // Function to open the about:blank page with the chosen URL shown inside of the page
 function create() {
-            var url = document.getElementById('input').value;
+            var url = document.getElementById('urlBox').value;
             var win = window.open();
             win.document.body.style.margin = '0';
             win.document.body.style.height = '100vh';
