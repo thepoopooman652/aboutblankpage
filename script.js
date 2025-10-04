@@ -62,7 +62,7 @@ function getSecureToken() {
 
 // Function to check the hash of the users input against the hash for the correct login
 function checkLogin() {
-    var loginCorrectHash = "1456755793";
+    var loginCorrectHash = "1217658861";
     var loginUserInput = document.getElementById("login").value;
     var userInputHash = stringToHash(loginUserInput);
     console.log("Users input is " + loginUserInput);
